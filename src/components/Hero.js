@@ -12,6 +12,10 @@ export default function Hero({
 }) {
   const [showAddEvent, setShowAddEvent] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  function handleExit() {
+    setSelectedEvent(null);
+    setShowAddEvent(false);
+  }
   function handleAttending() {
     if (selectedEvent < 1) return;
     setProfile((pr) =>
@@ -112,6 +116,7 @@ export default function Hero({
       />
       {!selectedEvent ? (
         <UserInfo
+          handleExit={handleExit}
           setProfile={setProfile}
           setSelectedUser={setSelectedUser}
           selectedUserEmail={selectedUserEmail}
@@ -128,6 +133,7 @@ export default function Hero({
           selectedEvent={selectedEvent}
           handleAttending={handleAttending}
           handleUnAttending={handleUnAttending}
+          handleExit={handleExit}
         />
       )}
     </div>

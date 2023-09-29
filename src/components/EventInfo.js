@@ -1,13 +1,19 @@
 import AttendButton from "./AttendButton";
+import Button from "./Button";
 export default function EventInfo({
   selectedEvent,
   handleAttending,
   selectedUserEmail,
   handleUnAttending,
+  handleExit,
 }) {
   return (
     <div className="user-info">
-      <p className="user-title">{selectedEvent.name}</p>
+      <div className="event-header">
+        <p className="user-title">{selectedEvent.name}</p>
+        <Button symbol="X" text="" onHandler={handleExit} />
+      </div>
+
       <p className="description-title">Summary:</p>
       <p className="description">{selectedEvent.eventDescription}</p>
       {selectedEvent.numberOfSeats > 0 &&

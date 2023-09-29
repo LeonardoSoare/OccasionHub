@@ -11,6 +11,7 @@ export default function UserInfo({
   events,
   handleUnAttending,
   quickUnAttend,
+  handleExit,
 }) {
   const show = showAddEvent;
   return (
@@ -56,6 +57,7 @@ export default function UserInfo({
         </>
       ) : (
         <Form
+          handleExit={handleExit}
           setProfile={setProfile}
           selectedUserEmail={selectedUserEmail}
           onAddEvent={handleAddEvent}

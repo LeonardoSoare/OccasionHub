@@ -6,6 +6,7 @@ export default function Form({
   onAddEvent,
   setEvents,
   selectedUserEmail,
+  handleExit,
 }) {
   const [description, setDescription] = useState("");
   const [eventName, setEventName] = useState("");
@@ -39,7 +40,10 @@ export default function Form({
 
   return (
     <form className="event-form" onSubmit={handleSubmit}>
-      <p className="user-title">Host event</p>
+      <div className="event-header">
+        <p className="user-title">Host event</p>
+        <Button symbol="X" text="" onHandler={handleExit} />
+      </div>
       <div className="input-field">
         <p className="instruction">Name of the Event</p>
         <input

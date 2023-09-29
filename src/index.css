@@ -163,10 +163,15 @@ body {
   border-radius: 9px 0px 0px 9px;
   min-height: 50vh;
 }
+.event-header {
+  display: flex;
+  justify-content: space-between;
+}
 .user-title {
   font-size: 3.2rem;
   margin-top: 1.6rem;
   text-align: center;
+  margin-left: 1.6rem;
 }
 .button {
   display: flex;
