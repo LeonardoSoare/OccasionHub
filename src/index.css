@@ -89,18 +89,41 @@ body {
   border-left: 2px solid rgba(0, 0, 0, 0.05);
   border-radius: 9px;
 }
-.date {
+.event-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  font-weight: 700;
+  padding-left: 0.8rem;
+  color: #333;
+}
+.event-date {
   margin-top: 1.6rem;
   font-size: 2rem;
   font-weight: 600;
   color: #555;
 }
-.name {
+.event-name {
   font-size: 2.4rem;
   font-weight: 600;
+  text-align: center;
 }
-.seats {
+.seats-available {
   font-size: 2rem;
+  text-align: center;
+  color: #7ea800;
+}
+.seats-sold {
+  font-size: 2rem;
+  text-align: center;
+  color: #800202;
 }
 .img {
   width: 2rem;
@@ -241,4 +264,15 @@ body {
 }
 .profile-title {
   padding-top: 3.2rem;
+}
+.description {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+.description-title {
+  font-size: 2.4rem;
+  margin-top: 0.8rem;
+  margin-left: 1.6rem;
 }

@@ -5,9 +5,7 @@ export default function Form({
   setProfile,
   onAddEvent,
   setEvents,
-  events,
   selectedUserEmail,
-  setSelectedUser,
 }) {
   const [description, setDescription] = useState("");
   const [eventName, setEventName] = useState("");
@@ -21,6 +19,8 @@ export default function Form({
       date: eventDate,
       eventDescription: description,
       id: Date.now(),
+      participating: [],
+      hostedBy: selectedUserEmail,
     };
     console.log(newEvent);
     onAddEvent();

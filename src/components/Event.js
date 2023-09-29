@@ -1,14 +1,24 @@
-export default function Event({ ev, setSelectedEvent }) {
+export default function Event({
+  ev,
+  setSelectedEvent,
+  selectedEvent,
+  setShowAddEvent,
+}) {
   return (
     <div
       className="event"
       onClick={(e) => {
-        setSelectedEvent(ev);
+        setShowAddEvent(false);
+        selectedEvent !== ev ? setSelectedEvent(ev) : setSelectedEvent(null);
       }}
     >
-      <p className="date">{ev.date}</p>
-      <p className="name">{ev.name}</p>
-      <p className="seats">{ev.numberOfSeats} </p>
+      <p className="event-date">{ev.date}</p>
+      <p className="event-name">{ev.name}</p>
+      <p className={ev.numberOfSeats > 0 ? "seats-available" : "seats-sold"}>
+        {ev.numberOfSeats > 0
+          ? `${ev.numberOfSeats} seats left !`
+          : "Tickets sold out !😢"}
+      </p>
     </div>
   );
 }
