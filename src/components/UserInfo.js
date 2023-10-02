@@ -18,42 +18,50 @@ export default function UserInfo({
     <div className={!show ? `user-info` : "add-event-form"}>
       {!show ? (
         <>
-          <p className="user-title">{!show ? `Your events` : "Add event"}</p>
-          {!!events.find((event) =>
-            event.participating.includes(selectedUserEmail)
-          )
-            ? events
-                .filter((event) =>
-                  event.participating.includes(selectedUserEmail)
-                )
-                .map((event) => (
-                  <EventItem
-                    quickUnAttend={quickUnAttend}
-                    name={event.name}
-                    id={event.id}
-                  />
-                ))
-            : ""}
+          <div className="attend-events">
+            <p className="user-title">{!show ? `My events` : "Add event"}</p>
+            {!!events.find((event) =>
+              event.participating.includes(selectedUserEmail)
+            )
+              ? events
+                  .filter((event) =>
+                    event.participating.includes(selectedUserEmail)
+                  )
+                  .map((event) => (
+                    <EventItem
+                      quickUnAttend={quickUnAttend}
+                      name={event.name}
+                      date={event.date}
+                      id={event.id}
+                    />
+                  ))
+              : ""}
+          </div>
 
           {!!events.find((event) =>
             event.hostedBy.includes(selectedUserEmail)
           ) ? (
-            <>
+            <div className="hosted-events">
               <p className="user-title">Hosted events:</p>
               {events
                 .filter((event) => event.hostedBy.includes(selectedUserEmail))
                 .map((event) => (
                   <EventItem
                     name={event.name}
+                    date={event.date}
                     id={event.id}
                     quickUnAttend={quickUnAttend}
                   ></EventItem>
                 ))}
-            </>
+              <Button
+                symbol={`+`}
+                text={`Host event`}
+                onHandler={handleAddEvent}
+              />
+            </div>
           ) : (
             ""
           )}
-          <Button symbol={`+`} text={`Host event`} onHandler={handleAddEvent} />
         </>
       ) : (
         <Form

@@ -8,6 +8,8 @@ export default function EventList({
 }) {
   return (
     <div className="event-list">
+      <p className="title">This month's events</p>
+
       {events.map((ev) => (
         <Event
           ev={ev}

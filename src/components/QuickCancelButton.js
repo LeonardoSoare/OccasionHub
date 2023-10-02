@@ -1,7 +1,7 @@
-export default function QuickCancelButton({ id, symbol, quickUnAttend }) {
+export default function QuickCancelButton({ id, quickUnAttend }) {
   return (
-    <div className="button" onClick={(e) => quickUnAttend(id)}>
-      <p className="symbol">{symbol}</p>
+    <div className="cancel-button" onClick={(e) => quickUnAttend(id)}>
+      <p>Cancel</p>
     </div>
   );
 }
