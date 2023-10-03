@@ -1,8 +1,9 @@
-import Form from "./Form";
 import Button from "./Button";
+import EventInfo from "./EventInfo";
 import EventItem from "./EventItem";
+import Form from "./Form";
 
-export default function UserInfo({
+export default function UserInfoV2({
   setProfile,
   selectedUserEmail,
   showAddEvent,
@@ -18,8 +19,8 @@ export default function UserInfo({
 }) {
   const show = showAddEvent;
   return (
-    <div className={!show ? `user-info` : "add-event-form"}>
-      {!show ? (
+    <div className="user-info">
+      {!selectedEvent ? (
         <>
           <div className="attend-events">
             <p className="user-title">{!show ? `My events` : "Add event"}</p>
@@ -40,32 +41,39 @@ export default function UserInfo({
                   ))
               : ""}
           </div>
-
-          {!!events.find((event) =>
-            event.hostedBy.includes(selectedUserEmail)
-          ) ? (
-            <div className="hosted-events">
-              <p className="user-title">Hosted events:</p>
-              {events
-                .filter((event) => event.hostedBy.includes(selectedUserEmail))
-                .map((event) => (
-                  <EventItem
-                    name={event.name}
-                    date={event.date}
-                    id={event.id}
-                    quickUnAttend={quickUnAttend}
-                  ></EventItem>
-                ))}
-              <Button
-                symbol={`+`}
-                text={`Host event`}
-                onHandler={handleAddEvent}
-              />
-            </div>
-          ) : (
-            ""
-          )}
         </>
+      ) : (
+        <EventInfo
+          selectedUserEmail={selectedUserEmail}
+          selectedEvent={selectedEvent}
+          handleAttending={handleAttending}
+          handleUnAttending={handleUnAttending}
+          handleExit={handleExit}
+        />
+      )}
+      {!show ? (
+        !!events.find((event) => event.hostedBy.includes(selectedUserEmail)) ? (
+          <div className="hosted-events">
+            <p className="user-title">Hosted events:</p>
+            {events
+              .filter((event) => event.hostedBy.includes(selectedUserEmail))
+              .map((event) => (
+                <EventItem
+                  name={event.name}
+                  date={event.date}
+                  id={event.id}
+                  quickUnAttend={quickUnAttend}
+                ></EventItem>
+              ))}
+            <Button
+              symbol={`+`}
+              text={`Host event`}
+              onHandler={handleAddEvent}
+            />
+          </div>
+        ) : (
+          ""
+        )
       ) : (
         <Form
           handleExit={handleExit}

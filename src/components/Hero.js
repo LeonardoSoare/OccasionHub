@@ -2,6 +2,7 @@ import { useState } from "react";
 import EventList from "./EventList";
 import UserInfo from "./UserInfo";
 import EventInfo from "./EventInfo";
+import UserInfoV2 from "./UserInfoV2";
 
 export default function Hero({
   selectedUserEmail,
@@ -114,7 +115,7 @@ export default function Hero({
         selectedEvent={selectedEvent}
         setShowAddEvent={setShowAddEvent}
       />
-      {!selectedEvent ? (
+      {/* {!selectedEvent ? (
         <UserInfo
           handleExit={handleExit}
           setProfile={setProfile}
@@ -126,6 +127,7 @@ export default function Hero({
           events={events}
           handleUnAttending={handleUnAttending}
           quickUnAttend={quickUnAttend}
+          selectedEvent={selectedEvent}
         />
       ) : (
         <EventInfo
@@ -135,7 +137,35 @@ export default function Hero({
           handleUnAttending={handleUnAttending}
           handleExit={handleExit}
         />
-      )}
+      )} */}
+      {/* <UserInfo
+        handleExit={handleExit}
+        setProfile={setProfile}
+        setSelectedUser={setSelectedUser}
+        selectedUserEmail={selectedUserEmail}
+        showAddEvent={showAddEvent}
+        handleAddEvent={handleAddEvent}
+        setEvents={setEvents}
+        events={events}
+        handleUnAttending={handleUnAttending}
+        quickUnAttend={quickUnAttend}
+        selectedEvent={selectedEvent}
+        handleAttending={handleAttending}
+      /> */}
+      <UserInfoV2
+        handleExit={handleExit}
+        setProfile={setProfile}
+        setSelectedUser={setSelectedUser}
+        selectedUserEmail={selectedUserEmail}
+        showAddEvent={showAddEvent}
+        handleAddEvent={handleAddEvent}
+        setEvents={setEvents}
+        events={events}
+        handleUnAttending={handleUnAttending}
+        quickUnAttend={quickUnAttend}
+        selectedEvent={selectedEvent}
+        handleAttending={handleAttending}
+      />
     </div>
   );
 }

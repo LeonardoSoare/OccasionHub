@@ -95,6 +95,7 @@ body {
   border-left: 2px solid rgba(0, 0, 0, 0.05); */
   background-color: #f7f7f7;
   border-radius: 9px;
+  padding-right: 1.6rem;
 }
 .event-item {
   display: flex;
@@ -120,6 +121,7 @@ body {
   width: 14.375rem;
 }
 .event-details {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -131,7 +133,8 @@ body {
 .event-info {
   display: flex;
   align-items: center;
-  gap: 6.4rem;
+  justify-content: space-between;
+  width: 100%;
 }
 .event-date {
   display: flex;
@@ -205,6 +208,10 @@ body {
   /* border-radius: 9px 0px 0px 9px; */
   min-height: 50vh;
 }
+.event-info-container {
+  margin-right: 3.2rem;
+  border-radius: 11px;
+}
 .attend-events {
   background-color: #fff;
   border-radius: 11px;
@@ -219,9 +226,30 @@ body {
   border-radius: 11px;
   margin-right: 3.2rem;
 }
-.event-header {
+.event-info-container {
+  background-color: #fff;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+.event-info-details {
+  display: flex;
+  margin-left: 3.2rem;
+}
+.event-info-description {
+}
+.event-info-date {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.event-info-time {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.event-info-img {
+  height: 15rem;
+  width: 21.5625rem;
 }
 .user-title {
   font-weight: 700;
@@ -239,7 +267,7 @@ body {
   font-weight: 700;
   align-items: center;
   background-color: #6f46a6;
-  max-width: 18rem;
+  /* max-width: 18rem; */
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
   padding-right: 2.4rem;
@@ -250,7 +278,35 @@ body {
   margin-top: 3.2rem;
   cursor: pointer;
 }
+.cancel {
+  background-color: #a61e4d;
+  font-weight: 600;
+  margin-top: 0;
+}
 
+.controls {
+  margin-left: 3.2rem;
+  margin: 3.2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.instructions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.back {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.instructions-text {
+  color: #6f46a6;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
 .symbol {
   /* color: white;
   background-color: purple;
@@ -341,13 +397,15 @@ body {
 .description {
   font-size: 1.8rem;
   text-align: center;
-  margin-top: 1.6rem;
+  margin-top: 0.4rem;
   margin-bottom: 1.6rem;
+  margin-left: 1.6rem;
 }
 .description-title {
-  font-size: 2.4rem;
-  margin-top: 0.8rem;
+  font-size: 2rem;
   margin-left: 1.6rem;
+  color: #6f46a6;
+  font-weight: bold;
 }
 .event-item-icon {
   height: 2.4rem;
