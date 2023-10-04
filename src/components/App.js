@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import Profile from "./Profile";
 import Hero from "./Hero";
 import ProfileForm from "./ProfileForm";
+import NavBar from "./NavBar";
 const profileTemp = [
   {
     email: "leonardomateisoare@gmail.com",
@@ -95,13 +96,9 @@ function App() {
   }
   return (
     <div>
-      <Menu
-        handleAddProfile={handleAddProfile}
-        profiles={profile}
-        selectedUser={selectedUserEmail}
-        setSelectedUser={setSelectedUser}
-      >
+      <Menu>
         <Logo />
+        <NavBar />
         <Profile
           handleAddProfile={handleAddProfile}
           profiles={profile}

@@ -1,0 +1,19 @@
+.nav-component-container {
+  display: flex;
+  gap: 4.8rem;
+}
+.nav-component {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-component-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.nav-component-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #e5dbff;
+}
