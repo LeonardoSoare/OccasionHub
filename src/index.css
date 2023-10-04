@@ -275,13 +275,18 @@ body {
   color: #fff;
   border-radius: 6px;
   align-self: center;
-  margin-top: 3.2rem;
   cursor: pointer;
 }
 .cancel {
   background-color: #a61e4d;
   font-weight: 600;
   margin-top: 0;
+}
+.buttons-form {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 2.4rem;
 }
 
 .controls {
@@ -322,32 +327,50 @@ body {
   min-height: 50vh;
 }
 .event-form {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  margin-right: 3.2rem;
+  border-radius: 11px;
 }
+.form-content {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3.2rem;
+}
+
 .input-field {
+  width: 25rem;
   margin-left: 2.4rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
+.input-field-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
 .instruction {
-  font-size: 2.4rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #4f5259;
 }
 .input-field input {
   max-width: 70%;
   appearance: none;
   border: none;
-  border: 2px solid #555;
+  border: 2px solid #aaa;
   height: 2.4rem;
   border-radius: 9px;
   height: 3rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.6rem;
+  background-color: #fafafa;
 }
 .input-field input::placeholder {
-  color: #333;
+  /* Temporary */
+  color: #fafafa;
   text-align: center;
   font-weight: 700;
 }
@@ -360,6 +383,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+}
+.button-form {
+  margin-top: 0rem;
+
+  text-decoration: none;
+  border: none;
+  background-color: #fff;
 }
 .colors {
   display: flex;
@@ -429,4 +459,11 @@ body {
   cursor: pointer;
   margin-left: 1.6rem;
   margin-right: 1.6rem;
+}
+.text-area {
+  width: 30rem;
+  height: 10.36rem;
+  resize: none;
+  border-radius: 11px;
+  background-color: #fafafa;
 }

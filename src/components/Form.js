@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
+import AttendButton from "./AttendButton";
 
 export default function Form({
   setProfile,
@@ -40,51 +41,57 @@ export default function Form({
 
   return (
     <form className="event-form" onSubmit={handleSubmit}>
-      <div className="event-header">
-        <p className="user-title">Host event</p>
-        <Button symbol="X" text="" onHandler={handleExit} />
-      </div>
-      <div className="input-field">
-        <p className="instruction">Name of the Event</p>
-        <input
-          type="text"
-          placeholder="Event Name"
-          value={eventName}
-          onChange={(e) => setEventName(e.target.value)}
-        />
-      </div>
-      <div className="input-field">
-        <p className="instruction">Enter the number of seats available</p>
-        <input
-          type="number"
-          placeholder="Number of seats available"
-          value={numberOfSeats}
-          onChange={(e) => setNumberOfSeats(e.target.value)}
-        />
-      </div>
-      <div className="input-field">
-        <p className="instruction">Enter the date of the event</p>
-        <input
-          type="date"
-          placeholder="Which date to choose"
-          value={eventDate}
-          onChange={(e) => setEventDate(e.target.value)}
-        ></input>
-        <div className="input-field">
-          <p className="instruction">
-            Please provide a description for your event
-          </p>
-          <textarea
-            className="text-area"
-            rows="3"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
+      <p className="user-title">Host event</p>
+      <div className="form-content">
+        <div className="form-first-part">
+          <div className="input-field">
+            <p className="instruction">Event Name</p>
+            <input
+              type="text"
+              placeholder="Event Name"
+              value={eventName}
+              onChange={(e) => setEventName(e.target.value)}
+            />
+          </div>
+          <div className="input-field">
+            <p className="instruction">Event Date</p>
+            <input
+              type="date"
+              placeholder="Which date to choose"
+              value={eventDate}
+              onChange={(e) => setEventDate(e.target.value)}
+            ></input>
+          </div>
+          <div className="input-field">
+            <p className="instruction">No.tickets</p>
+            <input
+              type="number"
+              placeholder="Number of seats available"
+              value={numberOfSeats}
+              onChange={(e) => setNumberOfSeats(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="form-final-part">
+          <div className="input-field-textarea">
+            <p className="instruction">Event description</p>
+            <div className="">
+              <textarea
+                className="text-area"
+                rows="3"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              ></textarea>
+            </div>
+          </div>
+          <div className="buttons-form">
+            <AttendButton symbol="" text="Cancel" kind="cancel" />
+            <button className="button-form">
+              <Button symbol={`+`} text={`Save event`} />
+            </button>
+          </div>
         </div>
       </div>
-      <button className="button">
-        <Button symbol={`+`} text={`Confirm event`} />
-      </button>
     </form>
   );
 }

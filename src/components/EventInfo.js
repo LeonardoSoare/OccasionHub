@@ -30,7 +30,10 @@ export default function EventInfo({
         {selectedEvent.numberOfSeats > 0 &&
         !!!selectedEvent.participating.includes(selectedUserEmail) ? (
           <>
-            <img className="back" src={backarrows} alt="go-back" />
+            <div className="instructions">
+              <img className="back" src={backarrows} alt="go-back" />
+              <p className="instructions-text">Back to my events</p>
+            </div>
             <AttendButton
               id={selectedEvent.id}
               handleAttending={handleAttending}
@@ -45,7 +48,7 @@ export default function EventInfo({
           <>
             <div className="instructions">
               <img className="back" src={backarrows} alt="go-back" />
-              <p className="instructions-text">Back to my events </p>
+              <p className="instructions-text">Back to my events</p>
             </div>
             <AttendButton
               kind="cancel"
