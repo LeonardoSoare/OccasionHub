@@ -5,7 +5,10 @@ export default function AttendButton({
   kind = "",
 }) {
   return (
-    <div className={`button ${kind}`} onClick={handleAttending}>
+    <div
+      className={`button align-self-center ${kind}`}
+      onClick={handleAttending}
+    >
       <p className="symbol">{symbol}</p>
       <p>{text}</p>
     </div>

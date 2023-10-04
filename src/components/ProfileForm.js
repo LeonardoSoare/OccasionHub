@@ -1,4 +1,5 @@
 import Button from "./Button";
+import festive from "../imgs/festive.svg";
 export default function ProfileForm({
   handleProfileSubmit,
   firstName,
@@ -9,49 +10,47 @@ export default function ProfileForm({
   setEmailAddress,
 }) {
   return (
-    <div>
-      <p className="user-title profile-title">Sign up for occasions !</p>
-      <form onSubmit={handleProfileSubmit} className="profile-form">
-        <div className="input-field">
-          <p className="instruction">Your name:</p>
-          <div className="input-name">
+    <div className="profile-form-container">
+      <div>
+        <form onSubmit={handleProfileSubmit} className="profile-form">
+          <p className="user-title profile-title">Sign up for occasions !</p>
+          <div className="input-field-profile-form">
+            <p className="instruction">First Name </p>
+
             <input
               type="text"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               placeholder="First Name"
+              required
             />
+          </div>
+          <div className="input-field-profile-form">
+            <p className="instruction">Last Name</p>
             <input
               type="text"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               placeholder="Last Name"
+              required
             />
           </div>
-        </div>
-        <div className="input-field">
-          <p className="instruction">Enter your email address:</p>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmailAddress(e.target.value)}
-            placeholder="youremailaddres@mail.com"
-          />
-        </div>
-        <div className="input-field">
-          <p className="instruction">Select a profile color:</p>
-          <div className="colors">
-            <div className="color red"></div>
-            <div className="color blue"></div>
-            <div className="color green"></div>
-            <div className="color yellow"></div>
-            <div className="color white"></div>
+          <div className="input-field-profile-form">
+            <p className="instruction">Email address</p>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmailAddress(e.target.value)}
+              placeholder="youremailaddres@mail.com"
+              required
+            />
+            <button className="button-profile-form">
+              <Button symbol={``} text={`Sign up`} />
+            </button>
           </div>
-        </div>
-        <button className="button">
-          <Button symbol={``} text={`Add profile`} />
-        </button>
-      </form>
+        </form>
+      </div>
+      <img className="profile-form-img" src={festive} alt="form" />
     </div>
   );
 }
