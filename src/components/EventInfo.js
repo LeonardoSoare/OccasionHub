@@ -12,6 +12,7 @@ export default function EventInfo({
   selectedUserEmail,
   handleUnAttending,
   handleExit,
+  setSelectedEvent,
 }) {
   return (
     <div className="event-info-container">
@@ -31,7 +32,10 @@ export default function EventInfo({
         {selectedEvent.numberOfSeats > 0 &&
         !!!selectedEvent.participating.includes(selectedUserEmail) ? (
           <>
-            <div className="instructions">
+            <div
+              onClick={(e) => setSelectedEvent(null)}
+              className="instructions"
+            >
               <img className="back" src={backarrows} alt="go-back" />
               <p className="instructions-text">Back to my events</p>
             </div>
@@ -47,7 +51,10 @@ export default function EventInfo({
 
         {!!selectedEvent.participating.includes(selectedUserEmail) ? (
           <>
-            <div className="instructions">
+            <div
+              onClick={(e) => setSelectedEvent(null)}
+              className="instructions"
+            >
               <img className="back" src={backarrows} alt="go-back" />
               <p className="instructions-text">Back to my events</p>
             </div>

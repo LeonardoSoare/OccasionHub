@@ -275,7 +275,11 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
-
+.white {
+  background-color: #fff;
+  color: #6f46a6;
+  font-size: 1.6rem;
+}
 /* .cancel {
   background-color: #a61e4d;
   font-weight: 600;

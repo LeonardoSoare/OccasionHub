@@ -154,6 +154,7 @@ export default function Hero({
         handleAttending={handleAttending}
       /> */}
       <UserInfoV2
+        setSelectedEvent={setSelectedEvent}
         handleExit={handleExit}
         setProfile={setProfile}
         setSelectedUser={setSelectedUser}

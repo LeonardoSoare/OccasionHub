@@ -24,7 +24,12 @@ export default function OptionList({
           />
         )
       )}
-      <Button symbol={`+`} text={`Add profile`} onHandler={handleAddProfile} />
+      <Button
+        symbol={`+`}
+        color={1}
+        text={`Add profile`}
+        onHandler={handleAddProfile}
+      />
     </div>
   );
 }

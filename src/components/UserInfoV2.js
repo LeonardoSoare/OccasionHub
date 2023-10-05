@@ -16,6 +16,7 @@ export default function UserInfoV2({
   setSelectedUser,
   selectedEvent,
   handleAttending,
+  setSelectedEvent,
 }) {
   const show = showAddEvent;
   return (
@@ -46,6 +47,7 @@ export default function UserInfoV2({
         </>
       ) : (
         <EventInfo
+          setSelectedEvent={setSelectedEvent}
           selectedUserEmail={selectedUserEmail}
           selectedEvent={selectedEvent}
           handleAttending={handleAttending}

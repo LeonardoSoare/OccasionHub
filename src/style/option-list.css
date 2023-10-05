@@ -1,6 +1,7 @@
 .option-list {
   position: absolute;
   top: 20;
-  margin-top: 2.4rem;
+  margin-top: 1.6rem;
   background-color: #fff;
+  border-radius: 9px;
 }
