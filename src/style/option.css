@@ -1,0 +1,23 @@
+.img {
+  height: 3.6rem;
+  width: 3.6rem;
+}
+.option {
+  align-items: center;
+  gap: 1.6rem;
+  display: flex;
+  font-size: 2.4rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.profile {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  color: var(--alice-blue);
+  font-size: 2.4rem;
+  margin-right: 6.4rem;
+  padding: 1rem 2rem;
+  position: relative;
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import Button from "./Button";
 import festive from "../imgs/festive.svg";
+import "../style/profileForm.css";
 export default function ProfileForm({
   handleProfileSubmit,
   firstName,
@@ -13,7 +14,7 @@ export default function ProfileForm({
     <div className="profile-form-container">
       <div>
         <form onSubmit={handleProfileSubmit} className="profile-form">
-          <p className="user-title profile-title">Sign up for occasions !</p>
+          <p className="profile-title">Sign up for occasions !</p>
           <div className="input-field-profile-form">
             <p className="instruction">First Name </p>
 

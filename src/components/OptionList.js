@@ -1,3 +1,4 @@
+import "../style/option-list.css";
 import Button from "./Button";
 import Option from "./Option";
 

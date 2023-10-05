@@ -4,6 +4,7 @@ import clock from "../imgs/clock.svg";
 import candidate from "../imgs/candidate.svg";
 import fun from "../imgs/fun.svg";
 import party from "../imgs/party.svg";
+import "../style/event.css";
 export default function Event({
   ev,
   setSelectedEvent,

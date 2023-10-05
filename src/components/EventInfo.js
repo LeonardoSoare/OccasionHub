@@ -5,6 +5,7 @@ import festive from "../imgs/festive.svg";
 import backarrows from "../imgs/backarrows.svg";
 import AttendButton from "./AttendButton";
 import Button from "./Button";
+import "../style/eventInfo.css";
 export default function EventInfo({
   selectedEvent,
   handleAttending,

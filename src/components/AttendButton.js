@@ -1,3 +1,4 @@
+import "../style/attendButton.css";
 export default function AttendButton({
   symbol,
   text,

@@ -1,5 +1,5 @@
 import Event from "./Event";
-
+import "../style/eventList.css";
 export default function EventList({
   events,
   selectedEvent,

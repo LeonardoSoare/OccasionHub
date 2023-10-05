@@ -3,6 +3,7 @@ import EventList from "./EventList";
 import UserInfo from "./UserInfo";
 import EventInfo from "./EventInfo";
 import UserInfoV2 from "./UserInfoV2";
+import "../style/hero.css";
 
 export default function Hero({
   selectedUserEmail,

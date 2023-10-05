@@ -1,0 +1,36 @@
+.add-event-form {
+  margin-top: 6.4rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 9px 0px 0px 9px;
+  min-height: 50vh;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin-top: 6.4rem;
+  min-height: 50vh;
+}
+.attend-events {
+  background-color: #fff;
+  border-radius: 11px;
+  padding-bottom: 3.2rem;
+  margin-right: 3.2rem;
+}
+.user-info-title {
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin-top: 1.6rem;
+  margin-left: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+.hosted-events {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3.2rem;
+  border-radius: 11px;
+  margin-right: 3.2rem;
+}

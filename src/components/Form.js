@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import AttendButton from "./AttendButton";
+import "../style/form.css";
 
 export default function Form({
   setProfile,
@@ -41,7 +42,7 @@ export default function Form({
 
   return (
     <form className="event-form" onSubmit={handleSubmit}>
-      <p className="user-title">Host event</p>
+      <p className="form-title">Host event</p>
       <div className="form-content">
         <div className="form-first-part">
           <div className="input-field">

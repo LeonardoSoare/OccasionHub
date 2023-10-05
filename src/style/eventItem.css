@@ -1,0 +1,26 @@
+.event-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  font-weight: 700;
+  padding-left: 0.8rem;
+  color: #6f46a6;
+  background-color: #f7f7f7;
+  margin-left: 3.2rem;
+  margin-right: 3.2rem;
+  border-radius: 11px;
+}
+.event-item-date {
+  align-items: center;
+  display: flex;
+  gap: 0.4rem;
+}
+.event-item-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}

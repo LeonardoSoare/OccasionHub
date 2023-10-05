@@ -2,7 +2,12 @@ import { useState } from "react";
 import Option from "./Option";
 import OptionList from "./OptionList";
 
-export default function Profile({ handleAddProfile, profiles, selectedUser,setSelectedUser }) {
+export default function Profile({
+  handleAddProfile,
+  profiles,
+  selectedUser,
+  setSelectedUser,
+}) {
   const [display, setDisplay] = useState(false);
   function handleDisplay() {
     setDisplay(!display);

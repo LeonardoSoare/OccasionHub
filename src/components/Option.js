@@ -1,3 +1,4 @@
+import "../style/option.css";
 import icon from "../imgs/icon.svg";
 
 export default function Option({

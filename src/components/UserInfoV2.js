@@ -2,7 +2,7 @@ import Button from "./Button";
 import EventInfo from "./EventInfo";
 import EventItem from "./EventItem";
 import Form from "./Form";
-
+import "../style/userInfo.css";
 export default function UserInfoV2({
   setProfile,
   selectedUserEmail,
@@ -23,7 +23,9 @@ export default function UserInfoV2({
       {!selectedEvent ? (
         <>
           <div className="attend-events">
-            <p className="user-title">{!show ? `My events` : "Add event"}</p>
+            <p className="user-info-title">
+              {!show ? `My events` : "Add event"}
+            </p>
             {!!events.find((event) =>
               event.participating.includes(selectedUserEmail)
             )
@@ -54,7 +56,7 @@ export default function UserInfoV2({
       {!show ? (
         !!events.find((event) => event.hostedBy.includes(selectedUserEmail)) ? (
           <div className="hosted-events">
-            <p className="user-title">Hosted events:</p>
+            <p className="user-info-title">Hosted events:</p>
             {events
               .filter((event) => event.hostedBy.includes(selectedUserEmail))
               .map((event) => (

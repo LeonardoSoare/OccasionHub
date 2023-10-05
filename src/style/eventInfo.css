@@ -1,0 +1,68 @@
+.event-info-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 3.2rem;
+  border-radius: 11px;
+}
+.user-title {
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin-top: 1.6rem;
+  margin-left: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+.event-info-details {
+  display: flex;
+  margin-left: 3.2rem;
+}
+.event-info-img {
+  height: 15rem;
+  width: 21.5625rem;
+}
+.event-info-date {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.description-title {
+  font-size: 2rem;
+  margin-left: 1.6rem;
+  color: #6f46a6;
+  font-weight: bold;
+}
+.event-info-time {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.description {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 0.4rem;
+  margin-bottom: 1.6rem;
+  margin-left: 1.6rem;
+}
+.controls {
+  margin-left: 3.2rem;
+  margin: 3.2rem;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.instructions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.back {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.instructions-text {
+  color: #6f46a6;
+  font-size: 1.6rem;
+  font-weight: 600;
+}

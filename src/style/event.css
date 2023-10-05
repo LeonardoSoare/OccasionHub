@@ -1,0 +1,59 @@
+.event {
+  display: flex;
+  gap: 1.6rem;
+  margin-left: 3.2rem;
+  background-color: #f7f7f7;
+  border-radius: 9px;
+  padding-right: 1.6rem;
+}
+.event-img {
+  height: 10rem;
+  width: 14.375rem;
+}
+.event-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.event-name {
+  margin-top: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #6f46a6;
+}
+.event-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.seats-available {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  text-align: center;
+  color: #7ea800;
+  font-weight: 600;
+  gap: 0.4rem;
+}
+.seats-sold {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #800202;
+}
+.event-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.event-date {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #555;
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import QuickCancelButton from "./QuickCancelButton";
 import clock from "../imgs/clock.svg";
+import "../style/eventItem.css";
 export default function EventItem({ name, date, quickUnAttend, id }) {
   // const [hover, setHover] = useState(null);
 
