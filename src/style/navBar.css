@@ -3,6 +3,7 @@
   gap: 4.8rem;
 }
 .nav-component {
+  text-decoration: none;
   display: flex;
   gap: 0.8rem;
   align-items: center;

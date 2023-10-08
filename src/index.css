@@ -59,13 +59,13 @@ body {
   position: relative;
   cursor: pointer;
 } */
-/* .main {
+.main {
   margin: 6.4rem auto;
   min-height: 100vh;
   width: 85vw;
   background-color: #f2f2f2;
   border-radius: 11px;
-} */
+}
 /* .title {
   padding-top: 1.6rem;
   font-size: 3rem;

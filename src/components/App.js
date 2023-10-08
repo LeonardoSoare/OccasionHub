@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Menu from "./Menu";
-import Main from "./Main";
 import Logo from "./Logo";
 import Profile from "./Profile";
-import Hero from "./Hero";
-import ProfileForm from "./ProfileForm";
 import NavBar from "./NavBar";
+import Homepage from "../pages/Homepage";
+import Formpage from "../pages/Formpage";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 const profileTemp = [
   {
     email: "leonardomateisoare@gmail.com",
@@ -62,9 +62,9 @@ const eventsTemp = [
   },
 ];
 function App() {
+  const navigate = useNavigate();
   const [events, setEvents] = useState(eventsTemp);
   // const [events, setEvents] = useState([]);
-  const [addProfile, setAddProfile] = useState(false);
   const [profile, setProfile] = useState(profileTemp);
   const [selectedUserEmail, setSelectedUser] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -75,7 +75,7 @@ function App() {
   console.log(currentAccount);
 
   function handleAddProfile(id) {
-    setAddProfile(!addProfile);
+    navigate(`form`);
   }
   function handleProfileSubmit(e) {
     const newProfile = {
@@ -95,7 +95,7 @@ function App() {
     handleAddProfile();
   }
   return (
-    <div>
+    <>
       <Menu>
         <Logo />
         <NavBar />
@@ -106,27 +106,39 @@ function App() {
           setSelectedUser={setSelectedUser}
         />
       </Menu>
-      <Main addProfile={addProfile}>
-        <Hero
-          profiles={profile}
-          selectedUserEmail={selectedUserEmail}
-          setSelectedUser={setSelectedUser}
-          setProfile={setProfile}
-          events={events}
-          setEvents={setEvents}
-        />
-        <ProfileForm
-          handleAddProfile={handleAddProfile}
-          handleProfileSubmit={handleProfileSubmit}
-          firstName={firstName}
-          lastName={lastName}
-          email={email}
-          setEmailAddress={setEmailAddress}
-          setLastName={setLastName}
-          setFirstName={setFirstName}
-        />
-      </Main>
-    </div>
+      <div className="main">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Homepage
+                profile={profile}
+                selectedUserEmail={selectedUserEmail}
+                setSelectedUser={setSelectedUser}
+                setProfile={setProfile}
+                events={events}
+                setEvents={setEvents}
+              />
+            }
+          />
+          <Route
+            path="form"
+            element={
+              <Formpage
+                handleAddProfile={handleAddProfile}
+                handleProfileSubmit={handleProfileSubmit}
+                firstName={firstName}
+                lastName={lastName}
+                email={email}
+                setEmailAddress={setEmailAddress}
+                setLastName={setLastName}
+                setFirstName={setFirstName}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </>
   );
 }
 
