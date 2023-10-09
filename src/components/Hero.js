@@ -4,6 +4,7 @@ import UserInfo from "./UserInfo";
 import EventInfo from "./EventInfo";
 import UserInfoV2 from "./UserInfoV2";
 import "../style/hero.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero({
   selectedUserEmail,
@@ -14,6 +15,7 @@ export default function Hero({
 }) {
   const [showAddEvent, setShowAddEvent] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const navigate = useNavigate();
   function handleExit() {
     setSelectedEvent(null);
     setShowAddEvent(false);
@@ -106,7 +108,7 @@ export default function Hero({
   }
 
   function handleAddEvent() {
-    setShowAddEvent(!showAddEvent);
+    navigate("host");
   }
   return (
     <div className="hero">

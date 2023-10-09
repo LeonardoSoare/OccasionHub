@@ -3,6 +3,7 @@ import EventInfo from "./EventInfo";
 import EventItem from "./EventItem";
 import Form from "./Form";
 import "../style/userInfo.css";
+import { useParams } from "react-router-dom";
 export default function UserInfoV2({
   setProfile,
   selectedUserEmail,
@@ -18,15 +19,14 @@ export default function UserInfoV2({
   handleAttending,
   setSelectedEvent,
 }) {
-  const show = showAddEvent;
+  let { show } = useParams();
+  if (show !== "host") show = null;
   return (
     <div className="user-info">
       {!selectedEvent ? (
         <>
           <div className="attend-events">
-            <p className="user-info-title">
-              {!show ? `My events` : "Add event"}
-            </p>
+            <p className="user-info-title">My events</p>
             {!!events.find((event) =>
               event.participating.includes(selectedUserEmail)
             )
@@ -76,7 +76,14 @@ export default function UserInfoV2({
             />
           </div>
         ) : (
-          ""
+          <div className="hosted-events">
+            <p className="user-info-title">Hosted events:</p>
+            <Button
+              symbol={`+`}
+              text={`Host event`}
+              onHandler={handleAddEvent}
+            />
+          </div>
         )
       ) : (
         <Form

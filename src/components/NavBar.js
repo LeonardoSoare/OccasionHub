@@ -12,14 +12,21 @@ export default function NavBar() {
           <p className="nav-component-text">Home</p>
         </NavLink>
       </div>
+
       <div className="nav-component">
-        <img className="nav-component-icon" src={events} alt="events button" />
-        <p className="nav-component-text">Browse events</p>
+        <NavLink className="nav-component" to="events">
+          <img
+            className="nav-component-icon"
+            src={events}
+            alt="events button"
+          />
+          <p className="nav-component-text">Browse events</p>
+        </NavLink>
       </div>
-      <div className="nav-component">
+      <NavLink to="/host" className="nav-component">
         <img className="nav-component-icon" src={cards} alt="cards button" />
         <p className="nav-component-text">Host an event</p>
-      </div>
+      </NavLink>
     </div>
   );
 }

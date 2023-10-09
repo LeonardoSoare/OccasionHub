@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 import AttendButton from "./AttendButton";
 import "../style/form.css";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Form({
   setProfile,
@@ -10,6 +11,7 @@ export default function Form({
   selectedUserEmail,
   handleExit,
 }) {
+  const navigate = useNavigate();
   const [description, setDescription] = useState("");
   const [eventName, setEventName] = useState("");
   const [numberOfSeats, setNumberOfSeats] = useState(0);
@@ -86,7 +88,10 @@ export default function Form({
             </div>
           </div>
           <div className="buttons-form">
-            <AttendButton symbol="" text="Cancel" kind="cancel" />
+            <NavLink className="nav-component" to="/">
+              <AttendButton symbol="" text="Cancel" kind="cancel" />
+            </NavLink>
+
             <button className="button-form">
               <Button symbol={`+`} text={`Save event`} />
             </button>

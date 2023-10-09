@@ -5,6 +5,7 @@ import Profile from "./Profile";
 import NavBar from "./NavBar";
 import Homepage from "../pages/Homepage";
 import Formpage from "../pages/Formpage";
+import Eventspage from "../pages/Eventspage";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 const profileTemp = [
   {
@@ -72,7 +73,7 @@ function App() {
   const [email, setEmailAddress] = useState("");
   const currentAccount =
     profile.filter((pr) => pr.email === selectedUserEmail).at(0) || "";
-  console.log(currentAccount);
+  // console.log(currentAccount);
 
   function handleAddProfile(id) {
     navigate(`form`);
@@ -136,6 +137,20 @@ function App() {
               />
             }
           />
+          <Route
+            path="/:show"
+            element={
+              <Homepage
+                profile={profile}
+                selectedUserEmail={selectedUserEmail}
+                setSelectedUser={setSelectedUser}
+                setProfile={setProfile}
+                events={events}
+                setEvents={setEvents}
+              />
+            }
+          />
+          <Route path="events" element={<Eventspage />} />
         </Routes>
       </div>
     </>

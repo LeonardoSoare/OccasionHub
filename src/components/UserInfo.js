@@ -2,6 +2,7 @@ import Form from "./Form";
 import Button from "./Button";
 import EventItem from "./EventItem";
 import "../style/userInfo.css";
+import { useParams } from "react-router-dom";
 export default function UserInfo({
   setProfile,
   selectedUserEmail,
@@ -16,7 +17,8 @@ export default function UserInfo({
   selectedEvent,
   handleAttending,
 }) {
-  const show = showAddEvent;
+  const { show } = useParams();
+  console.log(show);
   return (
     <div className={!show ? `user-info` : "add-event-form"}>
       {!show ? (
@@ -58,6 +60,7 @@ export default function UserInfo({
                     quickUnAttend={quickUnAttend}
                   ></EventItem>
                 ))}
+
               <Button
                 symbol={`+`}
                 text={`Host event`}
