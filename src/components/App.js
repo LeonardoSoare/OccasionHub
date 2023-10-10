@@ -36,7 +36,8 @@ const profileTemp = [
 const eventsTemp = [
   {
     date: "2023-09-05",
-    eventDescription: "Temporary Test Event",
+    eventDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     hostedBy: "leonardomateisoare@gmail.com",
     id: 1695649125860,
     name: "Test Event",
@@ -109,6 +110,8 @@ function App() {
     );
     setSelectedEvent(null);
   }
+  // TEMPORARY
+
   function handleUnAttending() {
     setProfile((pr) =>
       pr.map((profile) =>
@@ -259,6 +262,23 @@ function App() {
                 setSelectedEvent={setSelectedEvent}
                 selectedEvent={selectedEvent}
                 setShowAddEvent={setShowAddEvent}
+                handleAttending={handleAttending}
+                handleUnAttending={handleUnAttending}
+                selectedUserEmail={selectedUserEmail}
+              />
+            }
+          />
+          <Route
+            path="events/:id"
+            element={
+              <Eventspage
+                events={events}
+                setSelectedEvent={setSelectedEvent}
+                selectedEvent={selectedEvent}
+                setShowAddEvent={setShowAddEvent}
+                handleAttending={handleAttending}
+                handleUnAttending={handleUnAttending}
+                selectedUserEmail={selectedUserEmail}
               />
             }
           />

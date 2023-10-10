@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import EventList from "../components/EventList";
 
 function Eventspage({
@@ -10,15 +9,18 @@ function Eventspage({
   selectedEvent,
   setShowAddEvent,
   setSelectedEvent,
+  handleAttending,
+  handleUnAttending,
 }) {
-  const { show } = useParams();
-  console.log(show);
   return (
     <EventList
       events={events}
       setSelectedEvent={setSelectedEvent}
       selectedEvent={selectedEvent}
       setShowAddEvent={setShowAddEvent}
+      handleAttending={handleAttending}
+      handleUnAttending={handleUnAttending}
+      selectedUserEmail={selectedUserEmail}
     />
   );
 }

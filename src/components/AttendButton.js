@@ -3,6 +3,7 @@ export default function AttendButton({
   symbol,
   text,
   handleAttending,
+  id = 0,
   kind = "",
 }) {
   return (

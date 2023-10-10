@@ -5,7 +5,7 @@ import candidate from "../imgs/candidate.svg";
 import fun from "../imgs/fun.svg";
 import party from "../imgs/party.svg";
 import "../style/event.css";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button";
 export default function Event({
   ev,
@@ -13,10 +13,11 @@ export default function Event({
   selectedEvent,
   setShowAddEvent,
 }) {
+  const navigate = useNavigate();
   console.log(ev);
   let { pathname } = useLocation();
   console.log(pathname);
-  if (pathname === "/events")
+  if (pathname.includes("/events"))
     return (
       <div
         className="eventpage-event"
@@ -29,7 +30,12 @@ export default function Event({
         <div className="eventpage-details">
           <p className="eventpage-name">{ev.name}</p>
           <div className="eventpage-description-title">Description:</div>
-          <div className="eventpage-description">{ev.eventDescription}</div>
+          <div
+            className="eventpage-description"
+            onClick={() => navigate(`/events/${ev.id}`)}
+          >
+            {`${ev.eventDescription.slice(0, 200)}...show more.`}
+          </div>
           <div className="eventpage-info">
             <div
               className={
@@ -47,12 +53,14 @@ export default function Event({
               <img className="eventpage-icon" src={clock} alt="event-icon" />
               <p>{ev.date}</p>
             </div>
-            <Button
-              className="eventpage-button"
-              symbol={""}
-              text="Show more"
-              color={0}
-            />
+            <NavLink className="nav-component" to={`/events/${ev.id}`}>
+              <Button
+                className="eventpage-button"
+                symbol={""}
+                text="Show more"
+                color={0}
+              />
+            </NavLink>
           </div>
         </div>
       </div>
