@@ -38,6 +38,7 @@ export default function Form({
       );
       console.log(newProfiles);
       console.log(selectedUserEmail);
+      navigate("/");
       return newProfiles;
     });
   }
@@ -93,7 +94,9 @@ export default function Form({
             </NavLink>
 
             <button className="button-form">
+              {/* <NavLink to="/" className="nav-component"> */}
               <Button symbol={`+`} text={`Save event`} />
+              {/* </NavLink> */}
             </button>
           </div>
         </div>

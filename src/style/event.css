@@ -57,3 +57,63 @@
   font-weight: 600;
   color: #555;
 }
+.eventpage-event {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+  border-radius: 11px;
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
+}
+.eventpage-img {
+  height: 15rem;
+  width: 21.5625rem;
+}
+.eventpage-name {
+  margin-top: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #6f46a6;
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+.eventpage-details {
+  width: 100%;
+}
+.eventpage-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+.eventpage-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.eventpage-date {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+.eventpage-description-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #666;
+  margin-left: 1.6rem;
+}
+.eventpage-description {
+  width: 80%;
+  font-size: 1.6rem;
+  margin-top: 0.8rem;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+}

@@ -7,10 +7,20 @@ function Eventspage({
   setProfile,
   events,
   setEvents,
+  selectedEvent,
+  setShowAddEvent,
+  setSelectedEvent,
 }) {
   const { show } = useParams();
   console.log(show);
-  return <div></div>;
+  return (
+    <EventList
+      events={events}
+      setSelectedEvent={setSelectedEvent}
+      selectedEvent={selectedEvent}
+      setShowAddEvent={setShowAddEvent}
+    />
+  );
 }
 
 export default Eventspage;

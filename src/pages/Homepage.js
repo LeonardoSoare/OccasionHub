@@ -6,15 +6,30 @@ function Homepage({
   setProfile,
   events,
   setEvents,
+  handleExit,
+  handleAttending,
+  handleUnAttending,
+  quickUnAttend,
+  selectedEvent,
+  setShowAddEvent,
+  setSelectedEvent,
 }) {
+  console.log(selectedEvent);
   return (
     <Hero
+      handleExit={handleExit}
+      handleAttending={handleAttending}
+      handleUnAttending={handleUnAttending}
+      quickUnAttend={quickUnAttend}
       profiles={profile}
       selectedUserEmail={selectedUserEmail}
       setSelectedUser={setSelectedUser}
       setProfile={setProfile}
       events={events}
       setEvents={setEvents}
+      setShowAddEvent={setShowAddEvent}
+      setSelectedEvent={setSelectedEvent}
+      selectedEvent={selectedEvent}
     />
   );
 }
