@@ -37,35 +37,35 @@ function EventModal({
       </div>
       <p className="modal-title-description">Description:</p>
       <p className="modal-description">{event.eventDescription}</p>
-      <div
-        className="instructions"
-        onClick={(e) => {
-          setSelectedEvent(null);
-          navigate("/events");
-        }}
-      >
-        {/* <AttendButton
+      <div className="modal-buttons">
+        <div
+          className="instructions"
+          onClick={(e) => {
+            setSelectedEvent(null);
+            navigate("/events");
+          }}
+        >
+          {/* <AttendButton
           id={event.id}
           text="Join event"
         /> */}
-        <img className="back" src={backarrows} alt="go-back" />
-        <p className="instructions-text">Back to my events</p>
+          <img className="back" src={backarrows} alt="go-back" />
+          <p className="instructions-text">Back to my events</p>
+        </div>
+        {participating ? (
+          <NavLink className="nav-component" to="/events">
+            <AttendButton
+              kind="cancel"
+              handleAttending={handleUnAttending}
+              text="Cancel reservation"
+            />
+          </NavLink>
+        ) : (
+          <NavLink className="nav-component" to="/events">
+            <AttendButton text="Join event" handleAttending={handleAttending} />
+          </NavLink>
+        )}
       </div>
-      {participating ? (
-        <NavLink className="nav-component" to="/events">
-          <AttendButton
-            kind="cancel"
-            handleAttending={handleUnAttending}
-            text="Cancel reservation"
-          />
-        </NavLink>
-      ) : (
-        <NavLink className="nav-component" to="/events">
-          <AttendButton text="Join event" handleAttending={handleAttending} />
-        </NavLink>
-      )}
-      {}
-      {/* <img className="modal-img" alt="festivity" src={festive} /> */}
     </div>
   );
 }

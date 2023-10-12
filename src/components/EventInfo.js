@@ -6,6 +6,7 @@ import backarrows from "../imgs/backarrows.svg";
 import AttendButton from "./AttendButton";
 import Button from "./Button";
 import "../style/eventInfo.css";
+import { useNavigate } from "react-router-dom";
 export default function EventInfo({
   selectedEvent,
   handleAttending,
@@ -14,6 +15,7 @@ export default function EventInfo({
   handleExit,
   setSelectedEvent,
 }) {
+  const navigate = useNavigate();
   return (
     <div className="event-info-container">
       <p className="user-title">{selectedEvent.name}</p>
@@ -25,7 +27,12 @@ export default function EventInfo({
             <p className="event-info-time">{selectedEvent.date}</p>
           </div>
           <p className="description-title">Summary:</p>
-          <p className="description">{selectedEvent.eventDescription}</p>
+          <p className="description">
+            {selectedEvent.eventDescription.substr(0, 130)}
+            <span onClick={(e) => navigate(`/events/${selectedEvent.id}`)}>
+              ...show more.
+            </span>
+          </p>
         </div>
       </div>
       <div className="controls">

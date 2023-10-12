@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "../style/logo.css";
 export default function Logo() {
-  return <div className="logo">OccasionHub</div>;
+  const navigate = useNavigate();
+  return (
+    <div onClick={() => navigate("/")} className="logo">
+      OccasionHub
+    </div>
+  );
 }
