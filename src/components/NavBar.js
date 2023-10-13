@@ -3,7 +3,12 @@ import cards from "../imgs/cards.svg";
 import events from "../imgs/events.svg";
 import home from "../imgs/home.svg";
 import "../style/navBar.css";
+const { innerWidth: width, innerHeigth: height } = window;
+
 export default function NavBar() {
+  // if(+width <=790){
+  //   return()
+  // }
   return (
     <div className="nav-component-container">
       <div className="nav-component">

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import QuickCancelButton from "./QuickCancelButton";
 import clock from "../imgs/clock.svg";
 import "../style/eventItem.css";

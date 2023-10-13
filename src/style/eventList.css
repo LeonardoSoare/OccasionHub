@@ -41,3 +41,16 @@
   top: 0;
   left: 0;
 }
+@media (max-width: 75em) {
+  .title {
+    padding-bottom: 0rem;
+  }
+}
+@media (max-width: 64em) {
+}
+@media (max-width: 56.25em) {
+  .event-list {
+    margin-top: 3.2rem;
+    margin-right: 3.2rem;
+  }
+}

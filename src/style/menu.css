@@ -4,3 +4,13 @@
   align-items: center;
   background-color: var(--royal-purple);
 }
+@media (max-width: 49.375em) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+  }
+}

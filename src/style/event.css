@@ -117,3 +117,78 @@
   margin-bottom: 1.6rem;
   font-weight: 500;
 }
+@media (max-width: 91.5625em) and (min-width: 87.5em) {
+  .event-date {
+    font-size: 1.6rem;
+  }
+  .seats-available {
+    font-size: 1.6rem;
+  }
+  .seats-sold {
+    font-size: 1.6rem;
+  }
+  .event-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+@media (max-width: 83.125em) and (min-width: 78.75em) {
+  .event-date {
+    font-size: 1.8rem;
+  }
+  .seats-available {
+    font-size: 1.8rem;
+  }
+  .seats-sold {
+    font-size: 1.8rem;
+  }
+  .event-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+@media (max-width: 75em) {
+  .event-date {
+    font-size: 1.6rem;
+  }
+  .seats-available {
+    font-size: 1.6rem;
+  }
+  .seats-sold {
+    font-size: 1.6rem;
+  }
+  .event-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .event-name {
+    font-size: 2rem;
+  }
+  .event-img {
+    height: 10rem;
+    width: 14.375rem;
+  }
+}
+
+@media (max-width: 64em) {
+  .event-date {
+    font-size: 1.4rem;
+  }
+  .seats-available {
+    font-size: 1.4rem;
+  }
+  .seats-sold {
+    font-size: 1.4rem;
+  }
+  .event-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .event-name {
+    font-size: 1.8rem;
+  }
+  .event-img {
+    height: 9rem;
+    width: 12.9375rem;
+  }
+}

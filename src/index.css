@@ -30,12 +30,14 @@ FONT SIZE SYSTEM (px)
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 67.5%;
   font-family: "Open Sans", sans-serif;
 }
+
 body {
   background-color: var(--royal-purple-2);
 }
+
 /* .menu {
   display: flex;
   justify-content: space-between;
@@ -527,3 +529,43 @@ body {
   align-self: flex-end;
   margin-bottom: 3.2rem;
 } */
+@media (max-width: 100em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 87.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 78.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 67.625em) {
+  .white {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .button {
+    font-size: 1.4rem;
+    padding-top: 1.05rem;
+    padding-bottom: 1.05rem;
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
+    font-weight: 600;
+  }
+  .main {
+    width: 90vw;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 62.5%;
+  }
+  .main {
+    width: 80vw;
+  }
+}

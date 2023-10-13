@@ -63,6 +63,8 @@ const eventsTemp = [
     participating: [],
   },
 ];
+const { innerWidth: width, innerHeigth: height } = window;
+console.log(width, "🤣");
 function App() {
   const navigate = useNavigate();
   const [events, setEvents] = useState(eventsTemp);

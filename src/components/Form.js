@@ -95,7 +95,7 @@ export default function Form({
 
             <button className="button-form">
               {/* <NavLink to="/" className="nav-component"> */}
-              <Button symbol={`+`} text={`Save event`} />
+              <Button symbol="" text={`Save event`} />
               {/* </NavLink> */}
             </button>
           </div>

@@ -34,3 +34,17 @@
   border-radius: 11px;
   margin-right: 3.2rem;
 }
+@media (max-width: 75em) {
+  .user-info-title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .attend-events {
+    margin-left: 3.2rem;
+  }
+  .hosted-events {
+    margin-left: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+}

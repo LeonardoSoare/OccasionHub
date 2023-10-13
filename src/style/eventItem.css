@@ -24,3 +24,23 @@
   height: 2.4rem;
   width: 2.4rem;
 }
+
+@media (max-width: 75em) {
+  .event-item-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .event-item {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 64em) {
+  .event-item {
+    font-size: 1.6rem;
+  }
+  .event-item-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

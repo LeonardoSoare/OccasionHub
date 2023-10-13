@@ -4,3 +4,8 @@
   gap: 3.6rem;
   justify-content: space-between;
 }
+@media (max-width: 56.25em) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

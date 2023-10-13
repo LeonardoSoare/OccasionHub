@@ -18,3 +18,23 @@
   font-weight: 600;
   color: #e5dbff;
 }
+@media (max-width: 56.25em) {
+  .nav-component-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .nav-component-text {
+    font-size: 1.2rem;
+  }
+  .nav-component-container {
+    gap: 1.6rem;
+  }
+  .nav-component {
+    gap: 0.4rem;
+  }
+}
+@media (max-width: 49.375em) {
+  .nav-component-container {
+    flex-direction: column;
+  }
+}
