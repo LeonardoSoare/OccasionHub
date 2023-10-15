@@ -19,6 +19,7 @@
     transition: all 0.3s ease-in-out;
     justify-content: space-evenly;
     gap: 6.4rem;
+    z-index: 103;
   }
   .hamburger-wrapper {
     display: block;
@@ -31,6 +32,7 @@
     background-color: var(--royal-purple);
     padding: 0.75rem;
     border-radius: 50%;
+    z-index: 99;
   }
   .notOpen {
     right: -100%;

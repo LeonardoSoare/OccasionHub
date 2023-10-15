@@ -8,7 +8,7 @@
   top: -5%;
   left: 25%;
   border-radius: 11px;
-  z-index: 10000;
+  z-index: 101;
 }
 .modal-img {
   margin-top: 3.2rem;

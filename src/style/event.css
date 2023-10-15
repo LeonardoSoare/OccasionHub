@@ -192,6 +192,21 @@
     width: 12.9375rem;
   }
 }
+@media (min-width: 50em) and (max-width: 56.25em) {
+  .eventpage-img {
+    height: 8.5rem;
+    width: 12.21875rem;
+  }
+  .eventpage-name {
+    font-size: 2rem;
+  }
+  .eventpage-description-title {
+    font-size: 1.4rem;
+  }
+  .eventpage-date {
+    font-size: 1.6rem;
+  }
+}
 @media (max-width: 38.4375em) {
   .event-img {
     height: 8.5rem;
@@ -229,5 +244,25 @@
   }
   .seats-available {
     font-size: 1.4rem;
+  }
+  .eventpage-img {
+    height: 12rem;
+    width: 17.25rem;
+  }
+  .eventpage-date {
+    font-size: 1.4rem;
+  }
+  .eventpage-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .eventpage-name {
+    font-size: 1.8rem;
+  }
+  .eventpage-description {
+    font-size: 1.4rem;
+  }
+  .eventpage-description-title {
+    font-size: 1.8rem;
   }
 }
