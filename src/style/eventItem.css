@@ -44,3 +44,17 @@
     height: 1.6rem;
   }
 }
+@media (max-width: 38.4375em) {
+  .event-item {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 23.75em) {
+  .event-item {
+    font-size: 1.2em;
+  }
+  .event-item-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}

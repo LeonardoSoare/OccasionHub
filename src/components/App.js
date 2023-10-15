@@ -63,10 +63,12 @@ const eventsTemp = [
     participating: [],
   },
 ];
+
 const { innerWidth: width, innerHeigth: height } = window;
 console.log(width, "🤣");
 function App() {
   const navigate = useNavigate();
+  const [resize, setResize] = useState(null);
   const [events, setEvents] = useState(eventsTemp);
   // const [events, setEvents] = useState([]);
   const [profile, setProfile] = useState(profileTemp);
@@ -76,7 +78,6 @@ function App() {
   const [email, setEmailAddress] = useState("");
   const [showAddEvent, setShowAddEvent] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
-
   const currentAccount =
     profile.filter((pr) => pr.email === selectedUserEmail).at(0) || "";
   // console.log(currentAccount);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Option from "./Option";
 import OptionList from "./OptionList";
-
+import "../style/profile.css";
 export default function Profile({
   handleAddProfile,
   profiles,
@@ -17,7 +17,7 @@ export default function Profile({
     return profile.email === selectedUser;
   }
   return (
-    <div onClick={handleDisplay}>
+    <div className="profile-container" onClick={handleDisplay}>
       {/* <div className="profile">Profile Card</div> */}
       {selectedAccount ? (
         <Option

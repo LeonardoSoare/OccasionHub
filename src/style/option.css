@@ -33,3 +33,21 @@
     gap: 0.4rem;
   }
 }
+@media (max-width: 49.375em) {
+  .profile {
+    margin-right: 0rem;
+    padding: 0;
+    position: relative;
+  }
+  .img {
+    height: 3.6rem;
+    width: 3.6rem;
+  }
+  .profile {
+    font-size: 2.4rem;
+  }
+  .option {
+    font-size: 1.6rem;
+    padding: 0.66rem 1.33rem;
+  }
+}

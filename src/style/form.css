@@ -99,3 +99,42 @@
     width: 17rem;
   }
 }
+@media (max-width: 38.4375em) {
+  .form-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    margin-bottom: 1.6rem;
+  }
+  .text-area {
+    width: 30rem;
+  }
+  .event-form {
+    margin-left: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+  .input-field {
+    width: 30rem;
+  }
+}
+@media (max-width: 23.75em) {
+  .form-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    margin-bottom: 1.6rem;
+  }
+  .event-form {
+    margin-left: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+  .input-field {
+    width: 30rem;
+  }
+  .text-area {
+    width: 30rem;
+  }
+  .form-final-part {
+    margin-left: 1.6rem;
+  }
+}

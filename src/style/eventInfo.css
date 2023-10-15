@@ -66,3 +66,40 @@
   font-size: 1.6rem;
   font-weight: 600;
 }
+@media (max-width: 38.4375em) {
+  .event-info-container {
+    margin-left: 3.2rem;
+  }
+}
+@media (max-width: 36.25em) {
+  .event-info-details {
+    flex-direction: column;
+  }
+  .description {
+    margin-right: 3.2rem;
+  }
+}
+@media (max-width: 23.75em) {
+  .event-info-container {
+    margin-left: 3.2rem;
+  }
+  .user-title {
+    font-size: 3rem;
+    margin-bottom: 3.2rem;
+  }
+  .event-info-details {
+    flex-direction: column;
+    margin-left: 0rem;
+  }
+  .event-info-img {
+    align-self: center;
+    margin-bottom: 1.6rem;
+  }
+  .instructions-text {
+    font-size: 1.4rem;
+  }
+  .back {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

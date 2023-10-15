@@ -192,3 +192,42 @@
     width: 12.9375rem;
   }
 }
+@media (max-width: 38.4375em) {
+  .event-img {
+    height: 8.5rem;
+    width: 12.21875rem;
+  }
+  .seats-available {
+    font-size: 1.6rem;
+  }
+  .seats-sold {
+    font-size: 1.6rem;
+  }
+  .event-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .event-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .event-date {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 23.75em) {
+  .event-img {
+    height: 8rem;
+    width: 11.5rem;
+  }
+  .event-name {
+    font-size: 1.6rem;
+  }
+  .seats-sold {
+    font-size: 1.4rem;
+  }
+  .seats-available {
+    font-size: 1.4rem;
+  }
+}
