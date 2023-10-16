@@ -61,10 +61,12 @@ export default function UserInfoV2({
               .filter((event) => event.hostedBy.includes(selectedUserEmail))
               .map((event) => (
                 <EventItem
+                  key={event.id}
                   name={event.name}
                   date={event.date}
                   id={event.id}
                   quickUnAttend={quickUnAttend}
+                  disabled={true}
                 ></EventItem>
               ))}
             <Button

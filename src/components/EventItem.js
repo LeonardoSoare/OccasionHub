@@ -1,7 +1,7 @@
 import QuickCancelButton from "./QuickCancelButton";
 import clock from "../imgs/clock.svg";
 import "../style/eventItem.css";
-export default function EventItem({ name, date, quickUnAttend, id }) {
+export default function EventItem({ name, date, quickUnAttend, id, disabled }) {
   // const [hover, setHover] = useState(null);
 
   // function handleOnHover() {
@@ -20,7 +20,11 @@ export default function EventItem({ name, date, quickUnAttend, id }) {
       <div className="event-item-date">
         <img className="event-item-icon" src={clock} alt="clock-item" />
         <p>{date}</p>
-        <QuickCancelButton id={id} quickUnAttend={quickUnAttend} />
+        <QuickCancelButton
+          id={id}
+          quickUnAttend={quickUnAttend}
+          disabled={disabled}
+        />
       </div>
 
       {/* {hover && (

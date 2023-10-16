@@ -12,7 +12,9 @@
   margin-left: 1.6rem;
   margin-right: 1.6rem;
 }
-
+.disabled {
+  display: none;
+}
 @media (max-width: 64em) {
   .cancel-button {
     font-size: 1.4rem;

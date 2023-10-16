@@ -1,7 +1,14 @@
 import "../style/quickCancelButton.css";
-export default function QuickCancelButton({ id, quickUnAttend }) {
+export default function QuickCancelButton({
+  id,
+  quickUnAttend,
+  disabled = false,
+}) {
   return (
-    <div className="cancel-button" onClick={(e) => quickUnAttend(id)}>
+    <div
+      className={`cancel-button ${!disabled ? "" : "disabled"}`}
+      onClick={(e) => quickUnAttend(id)}
+    >
       <p>Cancel</p>
     </div>
   );
