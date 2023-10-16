@@ -34,6 +34,7 @@ export default function UserInfoV2({
                   )
                   .map((event) => (
                     <EventItem
+                      key={event.id}
                       quickUnAttend={quickUnAttend}
                       name={event.name}
                       date={event.date}
