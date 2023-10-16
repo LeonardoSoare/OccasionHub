@@ -47,7 +47,7 @@ const eventsTemp = [
   {
     date: "2023-09-06",
     eventDescription: "Talking about current politics",
-    hostedBy: "",
+    hostedBy: "leonardomateisoare@gmail.com",
     id: 1,
     name: "PolytiX",
     numberOfSeats: 1000,
@@ -56,7 +56,7 @@ const eventsTemp = [
   {
     date: "2023-09-26",
     eventDescription: "Hello to my art gallery event",
-    hostedBy: "",
+    hostedBy: "leonardomateisoare@gmail.com",
     id: 2,
     name: "Artemis Opening",
     numberOfSeats: 40,
@@ -99,7 +99,7 @@ function App() {
           ? {
               ...event,
               participating: [...event.participating, selectedUserEmail],
-              numberOfSeats: +event.numberOfSeats--,
+              numberOfSeats: event.numberOfSeats - 1,
             }
           : event
       )
@@ -129,7 +129,7 @@ function App() {
               participating: event.participating.filter(
                 (participator) => participator !== selectedUserEmail
               ),
-              numberOfSeats: event.numberOfSeats++,
+              numberOfSeats: event.numberOfSeats + 1,
             }
           : event
       )
@@ -158,7 +158,7 @@ function App() {
               participating: event.participating.filter(
                 (participator) => participator !== selectedUserEmail
               ),
-              numberOfSeats: event.numberOfSeats++,
+              numberOfSeats: event.numberOfSeats + 1,
             }
           : event
       )
