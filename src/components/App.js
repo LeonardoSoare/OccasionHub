@@ -248,12 +248,19 @@ function App() {
             path="/:show"
             element={
               <Homepage
+                handleExit={handleExit}
+                handleAttending={handleAttending}
+                handleUnAttending={handleUnAttending}
+                quickUnAttend={quickUnAttend}
                 profile={profile}
+                setShowAddEvent={setShowAddEvent}
+                setSelectedEvent={setSelectedEvent}
                 selectedUserEmail={selectedUserEmail}
                 setSelectedUser={setSelectedUser}
                 setProfile={setProfile}
                 events={events}
                 setEvents={setEvents}
+                selectedEvent={selectedEvent}
               />
             }
           />
