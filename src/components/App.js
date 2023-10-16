@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 import Homepage from "../pages/Homepage";
 import Formpage from "../pages/Formpage";
 import Eventspage from "../pages/Eventspage";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 const profileTemp = [
   {
     email: "leonardomateisoare@gmail.com",
@@ -64,11 +64,8 @@ const eventsTemp = [
   },
 ];
 
-const { innerWidth: width, innerHeigth: height } = window;
-console.log(width, "🤣");
 function App() {
   const navigate = useNavigate();
-  const [resize, setResize] = useState(null);
   const [events, setEvents] = useState(eventsTemp);
   // const [events, setEvents] = useState([]);
   const [profile, setProfile] = useState(profileTemp);
@@ -76,14 +73,10 @@ function App() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmailAddress] = useState("");
-  const [showAddEvent, setShowAddEvent] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const currentAccount =
-    profile.filter((pr) => pr.email === selectedUserEmail).at(0) || "";
-  // console.log(currentAccount);
+
   function handleExit() {
     setSelectedEvent(null);
-    setShowAddEvent(false);
   }
   function handleAttending() {
     if (selectedEvent < 1) return;
@@ -143,11 +136,8 @@ function App() {
     );
     setSelectedEvent(null);
   }
-  console.log(selectedEvent);
   function quickUnAttend(eventID) {
-    console.log(eventID);
     const [quickEvent] = events.filter((event) => event.id === eventID);
-    console.log(quickEvent);
     setProfile((pr) =>
       pr.map((profile) =>
         profile.email === selectedUserEmail
@@ -187,7 +177,6 @@ function App() {
     };
     e.preventDefault();
     setProfile((pr) => [...profile, newProfile]);
-    console.log(newProfile);
     setFirstName("");
     setLastName("");
     setEmailAddress("");
@@ -218,7 +207,6 @@ function App() {
                 handleUnAttending={handleUnAttending}
                 quickUnAttend={quickUnAttend}
                 profile={profile}
-                setShowAddEvent={setShowAddEvent}
                 setSelectedEvent={setSelectedEvent}
                 selectedUserEmail={selectedUserEmail}
                 setSelectedUser={setSelectedUser}
@@ -253,7 +241,6 @@ function App() {
                 handleUnAttending={handleUnAttending}
                 quickUnAttend={quickUnAttend}
                 profile={profile}
-                setShowAddEvent={setShowAddEvent}
                 setSelectedEvent={setSelectedEvent}
                 selectedUserEmail={selectedUserEmail}
                 setSelectedUser={setSelectedUser}
@@ -271,7 +258,6 @@ function App() {
                 events={events}
                 setSelectedEvent={setSelectedEvent}
                 selectedEvent={selectedEvent}
-                setShowAddEvent={setShowAddEvent}
                 handleAttending={handleAttending}
                 handleUnAttending={handleUnAttending}
                 selectedUserEmail={selectedUserEmail}
@@ -285,7 +271,6 @@ function App() {
                 events={events}
                 setSelectedEvent={setSelectedEvent}
                 selectedEvent={selectedEvent}
-                setShowAddEvent={setShowAddEvent}
                 handleAttending={handleAttending}
                 handleUnAttending={handleUnAttending}
                 selectedUserEmail={selectedUserEmail}

@@ -14,7 +14,6 @@ function Homepage({
   setShowAddEvent,
   setSelectedEvent,
 }) {
-  console.log(selectedEvent);
   return (
     <Hero
       handleExit={handleExit}

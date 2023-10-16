@@ -1,10 +1,6 @@
-import candidate from "../imgs/candidate.svg";
-import fun from "../imgs/fun.svg";
 import party from "../imgs/party.svg";
-import festive from "../imgs/festive.svg";
 import backarrows from "../imgs/backarrows.svg";
 import AttendButton from "./AttendButton";
-import Button from "./Button";
 import "../style/eventInfo.css";
 import { useNavigate } from "react-router-dom";
 export default function EventInfo({

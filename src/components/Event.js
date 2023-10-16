@@ -1,28 +1,18 @@
 import festive from "../imgs/festive.svg";
 import ticket from "../imgs/ticket.svg";
 import clock from "../imgs/clock.svg";
-import candidate from "../imgs/candidate.svg";
-import fun from "../imgs/fun.svg";
-import party from "../imgs/party.svg";
+
 import "../style/event.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button";
-export default function Event({
-  ev,
-  setSelectedEvent,
-  selectedEvent,
-  setShowAddEvent,
-}) {
+export default function Event({ ev, setSelectedEvent, selectedEvent }) {
   const navigate = useNavigate();
-  console.log(ev);
   let { pathname } = useLocation();
-  console.log(pathname);
   if (pathname.includes("/events"))
     return (
       <div
         className="eventpage-event"
         onClick={(e) => {
-          setShowAddEvent(false);
           selectedEvent !== ev ? setSelectedEvent(ev) : setSelectedEvent(null);
         }}
       >
@@ -70,7 +60,6 @@ export default function Event({
     <div
       className="event"
       onClick={(e) => {
-        setShowAddEvent(false);
         selectedEvent !== ev ? setSelectedEvent(ev) : setSelectedEvent(null);
       }}
     >

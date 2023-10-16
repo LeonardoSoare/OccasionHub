@@ -19,7 +19,6 @@ function EventModal({
   );
   const participating =
     selectedEvent?.participating.includes(selectedUserEmail);
-  console.log(participating);
   const navigate = useNavigate();
   return (
     <div className="modal">

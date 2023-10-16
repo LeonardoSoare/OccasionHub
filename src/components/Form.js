@@ -27,7 +27,6 @@ export default function Form({
       participating: [],
       hostedBy: selectedUserEmail,
     };
-    console.log(newEvent);
     onAddEvent();
     setEvents((events) => [...events, newEvent]);
     setProfile((pr) => {
@@ -36,8 +35,6 @@ export default function Form({
           ? { ...profile, hostedEvents: [...profile.hostedEvents, newEvent.id] }
           : profile
       );
-      console.log(newProfiles);
-      console.log(selectedUserEmail);
       navigate("/");
       return newProfiles;
     });

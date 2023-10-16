@@ -1,6 +1,4 @@
-import { useState } from "react";
 import EventList from "./EventList";
-import EventInfo from "./EventInfo";
 import UserInfoV2 from "./UserInfoV2";
 import "../style/hero.css";
 import { useNavigate, useParams } from "react-router-dom";
@@ -11,8 +9,6 @@ export default function Hero({
   setProfile,
   events,
   setEvents,
-  showAddEvent,
-  setShowAddEvent,
   selectedEvent,
   setSelectedEvent,
   handleExit,
@@ -23,7 +19,6 @@ export default function Hero({
   let { show } = useParams();
   // const [showAddEvent, setShowAddEvent] = useState(false);
   // const [selectedEvent, setSelectedEvent] = useState(null);
-  console.log(selectedEvent);
   const navigate = useNavigate();
   // function handleExit() {
   //   setSelectedEvent(null);
@@ -126,7 +121,6 @@ export default function Hero({
         events={events}
         setSelectedEvent={setSelectedEvent}
         selectedEvent={selectedEvent}
-        setShowAddEvent={setShowAddEvent}
       />
       {/* {!selectedEvent ? (
         <UserInfo
@@ -171,7 +165,6 @@ export default function Hero({
         setProfile={setProfile}
         setSelectedUser={setSelectedUser}
         selectedUserEmail={selectedUserEmail}
-        showAddEvent={showAddEvent}
         handleAddEvent={handleAddEvent}
         setEvents={setEvents}
         events={events}

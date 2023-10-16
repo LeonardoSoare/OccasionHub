@@ -14,9 +14,7 @@ export default function EventList({
 }) {
   let { pathname } = useLocation();
   const { id } = useParams();
-  console.log(id);
   const [ev] = events.filter((event) => event.id === +id);
-  console.log(ev);
   const navigate = useNavigate();
   return (
     <div

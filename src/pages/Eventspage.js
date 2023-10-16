@@ -2,10 +2,7 @@ import EventList from "../components/EventList";
 
 function Eventspage({
   selectedUserEmail,
-  setSelectedUser,
-  setProfile,
   events,
-  setEvents,
   selectedEvent,
   setShowAddEvent,
   setSelectedEvent,
