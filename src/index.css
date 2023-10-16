@@ -277,6 +277,7 @@ body {
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
+  text-align: center;
 }
 .white {
   background-color: #fff;

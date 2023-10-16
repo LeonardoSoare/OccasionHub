@@ -50,3 +50,38 @@
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 56.25em) {
+  .modal {
+    width: 65%;
+    height: auto;
+    left: 17.5%;
+    top: 2%;
+  }
+  .modal-background {
+    height: 8rem;
+  }
+  .modal-title {
+    font-size: 3.6rem;
+  }
+  .modal-description {
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
+  }
+  .modal-buttons {
+    margin-bottom: 1.6rem;
+  }
+}
+@media (max-width: 42.5em) and (min-width: 38.4375em) {
+  .modal {
+    width: 75%;
+    left: 12.5%;
+  }
+}
+@media (max-width: 34.0625em) {
+  .modal {
+    width: 80%;
+    top: 2%;
+    left: 10%;
+  }
+}
