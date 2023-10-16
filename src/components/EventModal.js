@@ -1,14 +1,5 @@
 import { useEffect } from "react";
 import backarrows from "../imgs/backarrows.svg";
-import candidate from "../imgs/candidate.svg";
-import cards from "../imgs/cards.svg";
-import clock from "../imgs/clock.svg";
-import events from "../imgs/events.svg";
-import festive from "../imgs/festive.svg";
-import fun from "../imgs/fun.svg";
-import home from "../imgs/home.svg";
-import icon from "../imgs/party.svg";
-import ticket from "../imgs/ticket.svg";
 import "../style/eventModal.css";
 import AttendButton from "./AttendButton";
 import { NavLink, useNavigate } from "react-router-dom";
