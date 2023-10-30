@@ -9,19 +9,19 @@ import Eventspage from "../pages/Eventspage";
 import { Route, Routes, useNavigate } from "react-router-dom";
 const profileTemp = [
   {
-    email: "leonardomateisoare@gmail.com",
-    firstName: "Leonardo-Matei",
+    email: "test@example.com",
+    firstName: "Guest",
     hostedEvents: [1695649125860],
     // hostedEvents: [],
-    lastName: "Soare",
+    lastName: "Account",
     participatingEvents: [],
   },
   {
     email: "test@gmail.com",
-    firstName: "Alexandra",
+    firstName: "John",
     hostedEvents: [1],
     // hostedEvents: [],
-    lastName: "Simion",
+    lastName: "Doe",
     participatingEvents: [],
   },
   {
